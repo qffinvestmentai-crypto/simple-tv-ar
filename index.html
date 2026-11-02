@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132e2b">
+  <meta name="description" content="شاشتك ببساطة: دليل عربي للتطبيق الذاتي يساعدك على تنظيم تطبيقات تلفزيونك المتوافق، باستخدام إعداداته الأصلية ودون مشاركة كلمات المرور.">
+  <title>شاشتك ببساطة | ترتيب أوضح لتطبيقات تلفزيونك</title>
+  <style>
+    :root{--ink:#173b36;--muted:#526b65;--paper:#f7f8f3;--white:#fff;--green:#186653;--dark:#132e2b;--mint:#dff2e7;--line:#dce5dd;--gold:#e9c77b;--radius:24px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.9;font-size:16px}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a{color:var(--green);text-underline-offset:5px;overflow-wrap:anywhere}
+    button{font:inherit;cursor:pointer}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #b58b27;outline-offset:5px}
+    h1,h2,h3,p{margin:0}
+    h1,h2,h3{line-height:1.45}
+    h1{font-size:clamp(2rem,5.4vw,3.9rem);letter-spacing:-1px}
+    h2{font-size:clamp(1.55rem,3vw,2.3rem)}
+    h3{font-size:1.15rem}
+    p+p{margin-top:12px}
+    .wrap{width:min(1120px,calc(100% - 36px));margin-inline:auto}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:22px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:10px;font-size:1.05rem;font-weight:700}
+    .brand-mark{width:33px;height:25px;border:2px solid var(--green);border-radius:7px;position:relative;display:inline-block}
+    .brand-mark:after{content:'';position:absolute;bottom:-6px;right:9px;width:11px;height:3px;background:var(--green);border-radius:3px}
+    .header-note{font-size:.76rem;color:var(--muted);text-align:left}
+    .hero{padding-block:48px 36px;display:grid;gap:35px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:.85rem;font-weight:700;margin-bottom:18px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+    .hero h1 span{color:var(--green)}
+    .intro{color:var(--muted);font-size:1.07rem;margin-top:20px;max-width:610px}
+    .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:15px;margin-top:25px}
+    .button{border:0;border-radius:12px;background:var(--green);color:#fff;padding:13px 25px;font-weight:700;min-height:48px;transition:background .2s,transform .2s}
+    .button:hover{background:#104c3d;transform:translateY(-2px)}
+    .micro{font-size:.82rem;color:var(--muted)}
+    .hero-disclaimer{margin-top:16px;font-size:.85rem;color:var(--muted)}
+    .visual{background:var(--mint);border:1px solid #cde4d7;border-radius:32px;padding:30px 19px 23px;position:relative;overflow:hidden}
+    .visual:before{content:'';position:absolute;width:170px;height:170px;border:35px solid #cce7d8;border-radius:50%;top:-90px;left:-65px}
+    .tv{position:relative;background:var(--dark);border:8px solid #25433c;border-radius:17px;padding:22px 16px 26px;box-shadow:0 18px 30px #183d3520}
+    .tv-top{display:flex;justify-content:space-between;gap:12px;color:#e2eee7;font-size:.77rem;margin-bottom:23px}
+    .tv-dots{display:flex;align-items:center;gap:5px}
+    .tv-dots i{width:5px;height:5px;border-radius:50%;background:#819b91}
+    .screen-label{color:#bdd3c9;font-size:.7rem;margin-bottom:10px}
+    .apps{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+    .app{display:flex;min-height:76px;align-items:center;justify-content:center;border-radius:11px;font-size:1.65rem;background:#335b50;color:#fff}
+    .app:first-child{background:var(--gold);color:var(--dark);outline:2px solid #fff;outline-offset:3px}
+    .app:nth-child(2){background:#597772}
+    .screen-lines{display:flex;gap:7px;margin-top:20px}
+    .screen-lines i{height:6px;flex:1;border-radius:10px;background:#34554c}
+    .screen-lines i:first-child{background:#7f9e90;flex:2}
+    .tv-stand{width:76px;height:16px;background:#25433c;margin-inline:auto;clip-path:polygon(35% 0,65% 0,80% 80%,100% 80%,100% 100%,0 100%,0 80%,20% 80%)}
+    .visual-caption{text-align:center;font-size:.78rem;color:#45685a;margin-top:18px;position:relative}
+    .trust-strip{display:grid;gap:13px;padding:20px 22px;background:var(--white);border:1px solid var(--line);border-radius:17px;font-size:.88rem}
+    .trust-strip span{display:flex;align-items:center;gap:9px}
+    .check{color:var(--green);font-weight:700}
+    section{padding-block:40px}
+    .section-head{max-width:720px;margin-bottom:25px}
+    .section-head p{margin-top:12px;color:var(--muted)}
+    .kicker{color:var(--green);font-size:.8rem;font-weight:700;margin-bottom:9px;display:block}
+    .grid{display:grid;gap:16px}
+    .card{padding:25px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius)}
+    .card p{margin-top:10px;color:var(--muted);font-size:.93rem}
+    .icon{display:flex;width:43px;height:43px;align-items:center;justify-content:center;background:#eff5ee;border-radius:13px;margin-bottom:18px;font-size:1.2rem}
+    .solution{background:var(--dark);color:#fff;border-radius:28px;padding:29px 23px}
+    .solution .kicker{color:#a9d8bd}
+    .solution .section-head p{color:#c7d8d0}
+    .steps{display:grid;gap:22px}
+    .step{display:flex;align-items:flex-start;gap:13px}
+    .step-number{display:flex;align-items:center;justify-content:center;flex:0 0 34px;height:34px;background:#294d41;border:1px solid #466659;border-radius:50%;color:#d6efde;font-size:.9rem}
+    .step p{color:#bfd1c7;margin-top:7px;font-size:.9rem}
+    .solution-note{border-top:1px solid #36534a;padding-top:18px;margin-top:25px;color:#c7d8d0;font-size:.85rem}
+    .compatibility{margin-top:18px;background:#f6efdd;border:1px solid #e8dbb7;border-radius:17px;padding:20px;font-size:.89rem;color:#5d5236}
+    .compatibility strong{display:block;margin-bottom:5px}
+    .packages{scroll-margin-top:25px}
+    .package{display:flex;flex-direction:column;position:relative;padding:25px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}
+    .package.family{border:2px solid var(--green);background:#f4faf5}
+    .package-tag{color:var(--green);font-size:.75rem;margin-bottom:12px;font-weight:700}
+    .package h3{font-size:1.35rem;overflow-wrap:anywhere}
+    .package-desc{font-size:.9rem;color:var(--muted);margin-top:10px;min-height:3.8em}
+    .price-block{padding-block:22px 18px;margin-block:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .price{font-size:2.1rem;font-weight:700;line-height:1.4;overflow-wrap:anywhere}
+    .currency-label{font-size:.75rem;color:var(--muted);margin-bottom:4px}
+    .qar{display:block;font-size:.78rem;color:var(--muted);margin-top:6px}
+    .package ul{list-style:none;padding:0;margin:0 0 22px;font-size:.9rem}
+    .package li{position:relative;padding-right:22px;margin-bottom:10px}
+    .package li:before{content:'✓';position:absolute;right:0;color:var(--green)}
+    .package-bottom{margin-top:auto;color:var(--muted);font-size:.78rem}
+    .purchase-note{margin-top:22px;padding:22px;text-align:center;background:var(--mint);border-radius:18px}
+    .purchase-note strong{display:block;font-size:1.05rem}
+    .purchase-note p{font-size:.82rem;color:var(--muted);margin-top:8px}
+    .faq-list{border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line);padding-block:18px}
+    summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:15px;font-weight:700;font-size:.97rem}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:'+';color:var(--green);font-size:1.3rem;line-height:1.4;flex-shrink:0}
+    details[open] summary:after{content:'−'}
+    details p{color:var(--muted);font-size:.92rem;padding-top:13px;max-width:900px}
+    .contact{display:grid;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+    .contact p{color:var(--muted);font-size:.9rem;margin-top:9px}
+    .contact a{font-weight:700;display:inline-block;font-size:.92rem}
+    footer{padding-block:12px 30px}
+    .next-step{padding:19px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--ink)}
+    @media(min-width:680px){.grid{grid-template-columns:repeat(3,1fr)}.trust-strip{grid-template-columns:repeat(3,1fr)}.features{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(3,1fr)}.contact{grid-template-columns:1fr auto}.solution{padding:35px}.header-note{font-size:.85rem}}
+    @media(min-width:960px){.hero{grid-template-columns:1.2fr 1fr;gap:60px;padding-block:65px 45px}.visual{padding:45px 30px 28px}.tv{padding:25px 22px 32px}.app{min-height:92px}section{padding-block:48px}.features{grid-template-columns:repeat(4,1fr)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    @media print{body{background:#fff}.hero-actions{display:none}.card,.package,.solution{break-inside:avoid}details p{display:block}.visual{display:none}.hero{display:block}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>شاشتك ببساطة</div>
+    <div class="header-note">دليل عربي رقمي<br>للتطبيق الذاتي</div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span>ملف جاهز للشراء الآن</div>
+        <h1 id="hero-title">رتّب شاشتك.<br><span>واستمتع بوصول أوضح إلى تطبيقاتك.</span></h1>
+        <p class="intro">دليل عربي يساعدك على ترتيب شاشة تلفزيونك المتوافق والوصول إلى تطبيقاتك المفضلة، باستخدام الإعدادات المتاحة في جهازك ودون مشاركة كلمات المرور.</p>
+        <div class="hero-actions">
+          <button class="button" type="button" onclick="document.getElementById('packages').scrollIntoView();document.getElementById('packages-title').focus({preventScroll:true})">قارن الباقات <span aria-hidden="true">↓</span></button>
+          <span class="micro">بخطوات واضحة وقوائم تحقق قابلة للطباعة</span>
+        </div>
+        <p class="hero-disclaimer">دليل تطبّقه بنفسك، وليس جلسة مباشرة أو خدمة تحكم عن بُعد.</p>
+      </div>
+      <div class="visual" role="img" aria-label="رسم توضيحي لشاشة مرتبة تحتوي على مجموعة صغيرة من التطبيقات المفضلة، وليس صورة لواجهة جهاز بعينه">
+        <div class="tv">
+          <div class="tv-top"><span>مساحة لمفضّلاتك</span><span class="tv-dots"><i></i><i></i><i></i></span></div>
+          <div class="screen-label">تطبيقات تختارها أنت</div>
+          <div class="apps"><div class="app">▶</div><div class="app">♫</div><div class="app">☆</div></div>
+          <div class="screen-lines"><i></i><i></i><i></i></div>
+        </div>
+        <div class="tv-stand"></div>
+        <p class="visual-caption">رسم توضيحي فقط — تختلف الواجهة والخيارات حسب جهازك.</p>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="مبادئ الدليل">
+      <span><b class="check" aria-hidden="true">✓</b>إعدادات التلفزيون الأصلية</span>
+      <span><b class="check" aria-hidden="true">✓</b>لا مشاركة لكلمات المرور</span>
+      <span><b class="check" aria-hidden="true">✓</b>لا أدوات مدفوعة مطلوبة</span>
+    </div>
+
+    <section aria-labelledby="problem-title">
+      <div class="section-head">
+        <span class="kicker">المشكلة ليست دائمًا نقص التطبيقات</span>
+        <h2 id="problem-title">تطبيقاتك موجودة… لكن أين تجدها؟</h2>
+        <p>بين صفوف الشاشة والتوصيات واختلاف القوائم، قد يصبح الوصول إلى تطبيقك المفضل أكثر إرباكًا مما ينبغي.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><span class="icon" aria-hidden="true">⌕</span><h3>بحث يتكرر كل مرة</h3><p>التطبيق الذي تستخدمه كثيرًا ليس بالضرورة في المكان الذي تتوقعه.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">▦</span><h3>شاشة مزدحمة بالخيارات</h3><p>يصعب تمييز ما تحتاج إليه وسط صفوف لا تستخدمها، حيث يتيح جهازك تخصيصها.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">↶</span><h3>تردّد قبل تغيير الإعدادات</h3><p>تريد ترتيبًا أنسب، لكنك تحتاج إلى توثيق ما كان موجودًا لتعرف كيف ترجع إليه.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="solution-title">
+      <div class="solution">
+        <div class="section-head">
+          <span class="kicker">الحل: ترتيب مقصود، لا تجارب عشوائية</span>
+          <h2 id="solution-title">ابدأ بما لديك. وغيّر ما تفهمه فقط.</h2>
+          <p>«شاشتك ببساطة» ينظّم خطواتك من تسجيل الوضع الحالي إلى اختبار الترتيب الجديد، بقدر ما تسمح به خيارات تلفزيونك.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">١</span><div><h3>تحقّق وسجّل</h3><p>راجع التوافق، ثم دوّن ترتيبك الحالي والإعدادات التي تنوي تغييرها دون معلومات حساسة.</p></div></article>
+          <article class="step"><span class="step-number">٢</span><div><h3>اختر ورتّب</h3><p>حدّد التطبيقات المهمة وأعد ترتيبها من الخيارات الأصلية المتاحة. تجاوز أي خيار غير موجود.</p></div></article>
+          <article class="step"><span class="step-number">٣</span><div><h3>اختبر وراجع</h3><p>افتح تطبيقات المشاهدة، وتحقّق من الاستخدام، واستعن بسجلك لإعادة الترتيب السابق عند الحاجة.</p></div></article>
+        </div>
+        <p class="solution-note">لا أداة تنظيف، ولا واجهة بديلة، ولا تعديل لخدمات النظام. الهدف تنظيم الاستخدام؛ وليس ضمان زيادة سرعة الجهاز أو إزالة الإعلانات.</p>
+      </div>
+      <aside class="compatibility" aria-label="تنبيه التوافق قبل الشراء">
+        <strong>قبل الشراء: ليس كل تلفزيون ذكي متوافقًا.</strong>
+        راجع اسم نظام التشغيل في «حول الجهاز»، وتحقّق من وجود خيارات ترتيب التطبيقات أو المفضلة. الدليل مخصّص لأنظمة تلفزيون محددة؛ وجود خيار الترتيب وحده لا يثبت التوافق. إذا لم تكن متأكدًا من أن نظامك مشمول، استفسر عن الأنظمة المشمولة عبر <a href="mailto:qff.investment@gmail.com">بريد التواصل</a> قبل الدفع. لا يشمل العرض فحصًا بشريًا لجهازك أو مراجعة شخصية لطرازه.
+      </aside>
+    </section>
+
+    <section aria-labelledby="features-title">
+      <div class="section-head">
+        <span class="kicker">مزايا المنتج</span>
+        <h2 id="features-title">وضوح في الخطوات. وحدود واضحة أيضًا.</h2>
+      </div>
+      <div class="grid features">
+        <article class="card"><span class="icon" aria-hidden="true">≡</span><h3>عربي وعملي</h3><p>إرشادات مرتبة وقوائم تحقق تساعدك على متابعة التطبيق دون الاعتماد على الذاكرة.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">⌂</span><h3>على جهازك الحالي</h3><p>تعتمد الخطوات على الريموت والإعدادات الأصلية، مع مراعاة اختلاف القوائم والتحديثات.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">🔒</span><h3>بياناتك تبقى لديك</h3><p>لا نحتاج إلى كلمات مرور أو رموز تحقق أو صلاحية دخول إلى التلفزيون.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">↩</span><h3>التوثيق قبل التغيير</h3><p>سجّل ما تغيّره لتتمكن من مراجعة خطواتك والرجوع إلى ترتيبك المسجّل عند الحاجة.</p></article>
+      </div>
+    </section>
+
+    <section class="packages" id="packages" aria-labelledby="packages-title">
+      <div class="section-head">
+        <span class="kicker">الباقات</span>
+        <h2 id="packages-title" tabindex="-1">اختر حسب طريقة استخدامك للشاشة</h2>
+        <p>كل باقة مستقلة ومكتملة بذاتها، ولا تتطلب شراء باقة أخرى. لا توجد اشتراكات أو أدوات مدفوعة مطلوبة لتطبيق الدليل.</p>
+      </div>
+      <div class="grid">
+        <article class="package">
+          <div class="package-tag">لترتيب التطبيقات الأساسية</div>
+          <h3>ترتيب واضح</h3>
+          <p class="package-desc">لمن يريد تنظيم المفضلة على تلفزيون واحد بخطوات محددة.</p>
+          <div class="price-block"><div class="currency-label">بالدولار الأمريكي</div><div class="price"><bdi dir="ltr">$27</bdi></div><small class="qar">المعادل التقريبي بالريال القطري: <bdi>≈ ٩٨ ر.ق تقريباً</bdi></small></div>
+          <ul><li>التركيز على الوصول إلى التطبيقات المفضلة.</li><li>توثيق الترتيب قبل إجراء التغييرات.</li><li>اختبار المشاهدة ومراجعة خطوات الرجوع.</li></ul>
+          <p class="package-bottom">تطبيق ذاتي • دون جلسة مباشرة</p>
+        </article>
+        <article class="package family">
+          <div class="package-tag">لتنظيم الاستخدام العائلي</div>
+          <h3>راحة الأسرة</h3>
+          <p class="package-desc">لمن يريد ترتيبًا تراعي فيه الأسرة تطبيقاتها وخطوات الوصول إليها.</p>
+          <div class="price-block"><div class="currency-label">بالدولار الأمريكي</div><div class="price"><bdi dir="ltr">$41</bdi></div><small class="qar">المعادل التقريبي بالريال القطري: <bdi>≈ ١٤٩ ر.ق تقريباً</bdi></small></div>
+          <ul><li>تنظيم التطبيقات المهمة لأفراد الأسرة.</li><li>تخصيص الصفوف والملفات حيث يدعمها الجهاز.</li><li>تسهيل تذكّر خطوات الوصول مع مراعاة الخصوصية.</li></ul>
+          <p class="package-bottom">باقة مستقلة • دون دعم تقني شخصي</p>
+        </article>
+        <article class="package">
+          <div class="package-tag">للتدرّب والمتابعة المنظمة</div>
+          <h3>استخدام بثقة</h3>
+          <p class="package-desc">لمن يريد ممارسة التنقل وتوثيق التغييرات والتعامل مع اختلاف القوائم.</p>
+          <div class="price-block"><div class="currency-label">بالدولار الأمريكي</div><div class="price"><bdi dir="ltr">$62</bdi></div><small class="qar">المعادل التقريبي بالريال القطري: <bdi>≈ ٢٢٦ ر.ق تقريباً</bdi></small></div>
+          <ul><li>تنظيم عائلي وتمارين ذاتية للاستخدام.</li><li>قرارات أوضح عند غياب خيار أو تغيّر موضعه.</li><li>متابعة التعديلات ومعرفة متى يجب التوقف.</li></ul>
+          <p class="package-bottom">باقة مستقلة • لا تتضمن خدمة إصلاح</p>
+        </article>
+      </div>
+      <div class="purchase-note">
+        <strong>اختر باقتك ثم ادفع عبر الأزرار في الأسفل</strong>
+        <p>الملف جاهز والبيع مفتوح الآن. راجع وصف الباقة وتوافق نظامك قبل الشراء. يُعرض مبلغ الدفع بالدولار قبل تأكيد الشراء؛ والمعادل بالريال تقريبي، وقد تختلف تكلفة تحويل العملة لدى البنك أو مزود الدفع.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="section-head"><span class="kicker">الأسئلة الشائعة</span><h2 id="faq-title">تعرّف إلى المنتج قبل أن تختاره</h2></div>
+      <div class="faq-list">
+        <details><summary>هل أشتري جلسة عن بُعد أم ملفًا؟</summary><p>تشتري دليلًا رقميًا عربيًا للتطبيق الذاتي مع أوراق وقوائم تحقق بحسب الباقة. لا توجد مكالمة مباشرة، ولا تحكم عن بُعد، ولا مراجعة شخصية لطراز جهازك. إذا كنت تريد شخصًا ينفّذ الإعداد نيابة عنك، فهذا المنتج ليس الخيار المناسب.</p></details>
+        <details><summary>كيف أتحقّق من التوافق قبل الشراء؟</summary><p>راجع اسم نظام التشغيل في قسم «حول الجهاز» ضمن الإعدادات، وتحقّق من وجود خيار ترتيب التطبيقات أو إضافتها إلى المفضلة. الدليل لا يشمل جميع أنظمة التلفزيون الذكي. إن لم تكن متأكدًا من شمول نظامك، استفسر عن الأنظمة المشمولة عبر <a href="mailto:qff.investment@gmail.com">بريد التواصل</a> قبل الشراء. تختلف أسماء القوائم حسب الجهاز والتحديث، ولا نضمن تطابق قوائم طراز بعينه.</p></details>
+        <details><summary>هل أحتاج إلى حاسوب أو خبرة تقنية؟</summary><p>لا تحتاج إلى حاسوب على الشبكة نفسها. يعتمد الدليل على ريموت التلفزيون وإعداداته الأصلية. تحتاج إلى جهاز لقراءة الملف، وإلى القدرة على فتح الإعدادات واتباع خطوات بسيطة. إذا لم يظهر خيار موصوف، تجاوزه ولا تغيّر إعدادًا بديلًا بالتخمين.</p></details>
+        <details><summary>هل سيصبح التلفزيون أسرع أو تختفي الإعلانات؟</summary><p>لا نضمن زيادة السرعة أو تحرير مساحة أو إزالة الإعلانات. الهدف تنظيم الوصول إلى التطبيقات وتقليل ازدحام الشاشة بقدر ما تسمح به إعدادات جهازك. ولا تتغيّر اشتراكات المشاهدة أو صلاحيات الوصول إلى المحتوى.</p></details>
+        <details><summary>هل أحتاج إلى حذف تطبيقات أو تثبيت أدوات خارجية؟</summary><p>لا تتطلب الخطوات الأساسية حذف التطبيقات أو تثبيت أدوات خارجية أو واجهة بديلة. ولا يتضمن الدليل فتح منافذ الراوتر، أو تعطيل الحماية وخدمات النظام، أو إعادة ضبط المصنع، أو تجاوز اشتراكات المحتوى.</p></details>
+        <details><summary>ما الفرق بين الباقات؟ وهل تشمل دعمًا لاحقًا؟</summary><p>باقة «ترتيب واضح» لتنظيم التطبيقات الأساسية، وباقة «راحة الأسرة» تضيف تنظيم الاستخدام العائلي والبطاقات الإرشادية، وباقة «استخدام بثقة» تضيف تمارين تعليمية وسجل تغييرات وشجرة قرارات. كل باقة مستقلة. لا تشمل أي باقة دعمًا تقنيًا شخصيًا أو تحديثات مستقبلية موعودة؛ معالجة مشكلات تسليم الملف منفصلة عن دعم التلفزيون.</p></details>
+        <details><summary>هل أشارك كلمات مروري أو صور حساباتي؟</summary><p>لا نحتاج إلى كلمات المرور أو رموز التحقق أو صلاحية الدخول إلى جهازك. احتفظ بأوراق توثيق الإعدادات لديك، ولا تسجّل فيها معلومات حساسة. إذا احتجت إلى تسجيل الدخول لتطبيق مشاهدة، نفّذ ذلك بنفسك دون مشاركة الشاشة أو بيانات الحساب.</p></details>
+        <details><summary>هل إعداد ملف للأطفال يضمن حجب كل المحتوى غير المناسب؟</summary><p>لا. يشرح الدليل استخدام ملفات المستخدمين أو الأطفال حيث تتوفر، لكنها لا تضمن حجب كل محتوى غير مناسب. تتفاوت إمكانات الرقابة بحسب النظام والتطبيق، ولا تغني عن متابعة الأسرة.</p></details>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <div class="contact">
+        <div><h2 id="contact-title">للتواصل</h2><p>للاستفسار عن الدليل أو الباقات أو الأنظمة المشمولة قبل الشراء.<br>يرجى عدم إرسال كلمات مرور أو رموز تحقق أو صور تعرض بيانات حسابك.</p></div>
+        <a href="mailto:qff.investment@gmail.com"><bdi dir="ltr">qff.investment@gmail.com</bdi></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p class="next-step">⚡ خطوتك الرابحة التالية: افتح اليوم قسم «حول الجهاز» في تلفزيونك وسجّل اسم نظام التشغيل للتحقّق من توافقه قبل اختيار باقتك.</p>
+  </footer>
+<!-- mared:legal:start --><section dir="rtl" lang="ar" style="max-width:760px;margin:32px auto;padding:20px 16px;border-top:1px solid rgba(0,0,0,.12);font-family:system-ui,sans-serif;line-height:1.8">
+<h2 style="font-size:20px">ما ستحصل عليه</h2><p>شاشتك ببساطة — تطبيقاتك موجودة، لكن الوصول إليها مربك؟ «شاشتك ببساطة» منتج رقمي للتطبيق الذاتي على تلفزيون Android TV أو Google TV متوافق، بخطوات عربية واضحة وقوائم تحقق قابلة للطباعة.
+تبدأ بتسجيل ترتيبك الحالي، ثم تختار التعديلات المناسبة لجهازك، وتختبر الوصول إلى تطبيقات المشاهدة، وتتعلم إعادة الترتيب السابق عند الحاجة.
+هذا العرض لملفات إرشادية، وليس جلسة مباشرة أو خدمة تحكم عن بُعد. لا يتضمن فحصًا بشريًا للجهاز أو دعمًا شخصيًا. نعتمد على إعدادات التلفزيون الأصلية؛ ولا نبيع أداة تنظيف أو واجهة بديلة.
+كل باقة مستقلة ولا تتطلب شراء باقة أخرى. الأسعار النهائية للمنتج بالريال القطري QAR، ولا توجد اشتراكات أو أدوات مدفوعة مطلوبة. عند إعداد الدفع عبر PayPal بالدولار.</p>
+<h3>الأسعار النهائية والباقات</h3><ul><li style="margin:8px 0"><b>ترتيب واضح</b>: <b>$27</b> <small style="opacity:.75">(≈ ٩٨ ر.ق تقريباً)</small> — <a href="https://paypal.me/MMS71017/27USD" target="_blank" rel="noopener" data-mared-buy="27" style="font-weight:700">اشترِ هذه الباقة</a><br><span style="font-size:13px">تشمل: ملف دليل عربي مستقل للتطبيق الذاتي على تلفزيون واحد، دون جلسة مباشرة.، قائمة تحقق لتحديد نظام التشغيل والتأكد من وجود خيارات ترتيب التطبيقات قبل إجراء أي تغيير.، ورقة لتسجيل ترتيب التطبيقات والإعدادات التي تنوي تغييرها، دون تدوين كلمات مرور أو بيانات حسابات.، خطوات اختيار التطبيقات المفضلة وإعادة ترتيبها عبر خيارات الشاشة الأصلية، متى كانت متاحة.، قائمة اختبار لفتح التطبيقات المفضلة والتأكد من استمرار المشاهدة بعد الترتيب.، خطوات إعادة الترتيب المسجل سابقًا، مع قاعدة واضحة: تجاوز أي خيار غير موجود بدل تجربة إعدادات غير مفهومة.</span></li><li style="margin:8px 0"><b>راحة الأسرة</b>: <b>$41</b> <small style="opacity:.75">(≈ ١٤٩ ر.ق تقريباً)</small> — <a href="https://paypal.me/MMS71017/41USD" target="_blank" rel="noopener" data-mared-buy="41" style="font-weight:700">اشترِ هذه الباقة</a><br><span style="font-size:13px">تشمل: ملف دليل عربي مستقل يشمل فحص التوافق الذاتي، وتسجيل الحالة الأصلية، وترتيب المفضلة، واختبار المشاهدة، والرجوع إلى الترتيب السابق.، ورقة لاختيار تطبيقات الأسرة الأساسية وتقليل عدد الخطوات للوصول إليها.، تعليمات إظهار أو إخفاء صفوف وتوصيات الشاشة الرئيسية من الإعدادات الأصلية، حيث يدعم الجهاز ذلك.، شرح استخدام ملفات المستخدمين أو ملف الأطفال إن كانت متاحة، مع توضيح أنها لا تضمن حجب كل محتوى غير مناسب.، بطاقة قابلة للطباعة يملؤها المشتري بأسماء التطبيقات وخطوات الوصول إليها لتسهيل الاستخدام على أفراد الأسرة.، قائمة مراجعة للخصوصية أثناء التطبيق: عدم مشاركة كلمات المرور، وعدم تصوير بيانات الحساب، وعدم تسجيل الشاشة التي تعرض معلومات حساسة.</span></li><li style="margin:8px 0"><b>استخدام بثقة</b>: <b>$62</b> <small style="opacity:.75">(≈ ٢٢٦ ر.ق تقريباً)</small> — <a href="https://paypal.me/MMS71017/62USD" target="_blank" rel="noopener" data-mared-buy="62" style="font-weight:700">اشترِ هذه الباقة</a><br><span style="font-size:13px">تشمل: ملف دليل عربي مستقل يشمل التوافق الذاتي، وتوثيق الترتيب الأصلي، وترتيب المفضلة وصفوف الشاشة المتاحة، واختبار المشاهدة، وخطوات الرجوع.، أوراق تنظيم تطبيقات الأسرة وبطاقة الوصول السريع، مع شرح ملفات المستخدمين والأطفال حيث تتوفر.، خطة تدريب ذاتي من ثلاثة تمارين: الوصول إلى تطبيق، والتنقل بين التطبيقات، والعودة إلى الشاشة الرئيسية.، شجرة قرارات مبسطة لاختلاف أسماء القوائم، وعدم ظهور خيار الترتيب، وتغيّر موضع التطبيقات بعد تحديث النظام.، سجل تغييرات قابل للطباعة يربط كل تعديل بسبب اختياره وطريقة التراجع عنه.، قائمة صيانة تنظيمية دورية، ونموذج فارغ لوصف مشكلة لمقدم دعم تختاره بنفسك، دون تضمين خدمة تواصل أو إصلاح.، قواعد توقف واضحة عند ظهور طلب لتعطيل الحماية أو تعديل خدمات النظام أو تثبيت برنامج من مصدر غير موثوق.</span></li></ul><p style="font-size:13px">السعر النهائي بالدولار الأمريكي ويُدفع عبر PayPal بلا رسوم إضافية من البائع. المبلغ بالريال تقريبي للإيضاح فقط، وقد يطبّق PayPal أو بنكك رسوم تحويل عملة.</p>
+<h3>طريقة التسليم</h3><p>بعد تأكيد الدفع عبر PayPal يصلك المنتج (ملف رقمي) على بريدك المسجّل في PayPal خلال ٢٤ ساعة كحد أقصى.</p><p dir="ltr" lang="en" style="font-size:13px">Digital file delivered to your PayPal email within 24 hours of payment confirmation.</p>
+<h3>سياسة الاسترداد</h3><p>يمكن طلب استرداد كامل سعر المنتج خلال 7 أيام تقويمية من الشراء إذا تعذر تسليم ملف قابل للفتح ولم تُحل المشكلة، أو اختلف المحتوى جوهريًا عن وصف الباقة، أو تعذر تطبيق الخطوات الأساسية رغم استيفاء شروط التوافق المنشورة. تُرد الدفعة المكررة للشراء نفسه أيضًا. يكفي رقم الطلب ووصف مختصر للمشكلة؛ لا نطلب كلمات مرور أو وصولًا إلى الجهاز. تُراجع الطلبات خلال 3 أيام عمل، ويكون الاسترداد بعد الموافقة إلى وسيلة الدفع الأصلية، وتختلف مدة ظهوره بحسب مزود الدفع. تغيير الرأي بعد تسليم ملف صالح ومطابق للوصف لا يشمله هذا الضمان الاختياري، دون انتقاص من حقوق المستهلك المقررة نظامًا. مهلة الأيام السبعة لا تُسقط حقوقك القانونية عند وجود عيب أو عدم مطابقة، ولا نفرض الاستبدال بدل الاسترداد متى كان الاسترداد حقًا لك، وإذا منحك قانون بلدك حقوقًا أوسع (مثل حق العدول) فهي محفوظة.</p>
+<h3>البائع والتواصل</h3><p>البائع: سمارت وورك — سجل تجاري قطري رقم 257327 — العنوان: قطر — للتواصل: <a href="mailto:qff.investment@gmail.com">qff.investment@gmail.com</a></p>
+<p><a href="terms.html">شروط البيع</a> · <a href="privacy.html">سياسة الخصوصية</a></p>
+</section><!-- mared:legal:end --><!-- mared:track:start --><script>(function(){var E="https://project--f828acae-b1b1-4da9-85f0-b801f1be3701-dev.lovable.app/api/public/track",P="9df8622d-e80c-4bf3-830d-d15cf0fbf577";function s(k,t){try{var d=JSON.stringify({p:P,k:k,t:t||""});if(navigator.sendBeacon){navigator.sendBeacon(E,new Blob([d],{type:"text/plain"}));}else{fetch(E,{method:"POST",body:d,mode:"no-cors",keepalive:true});}}catch(e){}}s("view");document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";if(/paypal\./i.test(h)){var m=h.match(/\/(\d+(?:\.\d+)?)USD/i);s("paypal_click",m?m[1]:"other");}},true);})();</script><!-- mared:track:end --><!-- mared:payouts:start --><section dir="rtl" style="text-align:center;padding:32px 16px;margin-top:32px;border-top:1px solid rgba(0,0,0,.08)"><p style="margin:0 0 12px;font-family:system-ui,sans-serif;font-weight:700">ادعم / اشترِ الآن</p><a href="https://paypal.me/MMS71017" target="_blank" rel="noopener" data-mared-payout="paypal" style="display:inline-block;margin:6px;padding:12px 22px;border-radius:12px;background:#e8b44a;color:#1a1408;font-weight:700;text-decoration:none;font-family:system-ui,sans-serif">ادفع عبر PayPal</a></section><!-- mared:payouts:end --></body>
+</html>
